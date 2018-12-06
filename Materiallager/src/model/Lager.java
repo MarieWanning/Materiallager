@@ -1,11 +1,14 @@
 package model;
 
+
+
+
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
 /**
- * Sämtiche Lager sind Observable und werden von ihren Oberlagern beobachtet
+ * SÃ¤mtiche Lager sind Observable und werden von ihren Oberlagern beobachtet
  */
 public class Lager extends Observable implements Observer{
 
@@ -14,17 +17,17 @@ public class Lager extends Observable implements Observer{
 	int fuellstand;
 
 	/**
-	 * Alle zu diesem Lager gehörigen Unterlager
+	 * Alle zu diesem Lager gehÃ¶rigen Unterlager
 	 */
-	//ArrayList, weil man so viele Lager hinzufügen kann, wie man möchte, das geht bei einem einfachen Array nicht.
+	//ArrayList, weil man so viele Lager hinzufÃ¼gen kann, wie man mÃ¶chte, das geht bei einem einfachen Array nicht.
 	ArrayList<Lager> unterLager;
 	ArrayList<Lieferung> erfolgteLieferungen;
 
 	/**
 	 * @param name: Name des Lagers
-	 * @param maxKapazitaet: maximal Kapazität, die nicht überschritten werden kann.
-	 * @param fuellstand: wie viel im Lager gefüllt ist
-	 * @param oberLager: übergeordnete Lager
+	 * @param maxKapazitaet: maximal KapazitÃ¤t, die nicht Ã¼berschritten werden kann.
+	 * @param fuellstand: wie viel im Lager gefÃ¼llt ist
+	 * @param oberLager: Ã¼bergeordnete Lager
 	 */
 	public Lager(String name, int maxKapazitaet, int fuellstand, Lager oberLager) {
 		if(fuellstand < maxKapazitaet) {
@@ -44,7 +47,7 @@ public class Lager extends Observable implements Observer{
 	}
 
 	/**Diese Methode gibt ein int[2] mit
-	 * @return [0] maxKapazität [1] fuellstand
+	 * @return [0] maxKapazitÃ¤t [1] fuellstand
 	 */
 	public int[] anzeigen() {
 		int[] j = new int[2];
